@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ooi Tong Yeow - Professional Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('main > section');
+      sections.forEach(section => {
+        if (section.id === sectionId) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initially show the About section only
+      showSection('about');
+
+      // Add event listeners to nav links
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          showSection(targetId);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Ooi Tong Yeow</h1>
+    <p>Highly Committed Process Equipment Engineer</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+      <p>
+        I am a Process Equipment Engineer with 4 years of experience optimizing manufacturing processes and 
+        maintaining advanced collateral tooling equipment. Passionate about safety, quality, and process improvement.
+      </p>
+    </section>
+
+    <section id="skills" style="display: none;">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <img src="technical-skills.jpg" alt="Technical Skills Icon">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Power Query / Power BI</li>
+            <li>Data Commonality Analytics (JMP)</li>
+            <li>Process Improvement</li>
+            <li>ERP Systems Implementation</li>
+            <li>SQL Pathfinder</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <img src="soft-skills.jpg" alt="Soft Skills Icon">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Team Player</li>
+            <li>Work Ethic</li>
+            <li>Attention to Detail</li>
+            <li>Responsibility</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" style="display: none;">
+      <h2>Work Experience</h2>
+      <article>
+        <h3>HDMX TIU Module Process Engineer</h3>
+        <img src="experience1.jpg" alt="Work Experience Icon">
+        <p><strong>Intel Technology (Penang) Sdn Bhd</strong> | Jan 2023 - Present</p>
+        <ul>
+          <li>Mitigated $200K in potential risks and supported high-volume manufacturing (HVM) ramp.</li>
+          <li>Improved collateral repair effectiveness by 85% through collaborative problem-solving.</li>
+          <li>Enabled faster decision-making with Power BI dashboards, reducing issue resolution time by 20%.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Duty Free Import Tracking Process Engineer</h3>
+        <img src="experience2.jpg" alt="Work Experience Icon">
+        <p><strong>Intel Technology (Penang) Sdn Bhd</strong> | Dec 2020 - Present</p>
+        <ul>
+          <li>Deployed a new database system, improving transaction handling across multiple factories.</li>
+          <li>Trained over 200 employees, boosting asset reporting accuracy by 80%.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education" style="display: none;">
+      <h2>Education</h2>
+      <img src="education.jpg" alt="Education Icon">
+      <p><strong>Bachelor of Engineering (HONS) Mechanical Engineering</strong></p>
+      <p>University Tunku Abdul Rahman (UTAR) | Jan 2017 - Dec 2020</p>
+      <p>CGPA: 2.8704</p>
+    </section>
+
+    <section id="contact" style="display: none;">
+      <h2>Contact Me</h2>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Address: 104-6A Jalan Tan Sri Teh Ewe Lim, 11600 Pulau Pinang</li>
+        <li><iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d318266.62678026415!2d100.2370193738802!3d5.417802739372022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac3da54a10ec7%3A0x7cb903bf8ed71b3f!2sPenang!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy" 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+        <li><i class="fas fa-phone"></i> Phone: 016-4618836</li>
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:tong.yeow.ooi@gmail.com">tong.yeow.ooi@gmail.com</a></li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/ooi-tong-yeow-203832100/" target="_blank">linkedin.com/in/ooi-tong-yeow-203832100</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Thank you for visiting my profile!</p>
+  </footer>
+</body>
+</html>
